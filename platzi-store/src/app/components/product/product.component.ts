@@ -25,13 +25,6 @@ export class ProductComponent implements OnInit, DoCheck, OnDestroy {
     console.log('1. Constructor');
   }
 
-  /*
-  ngOnChanges(changes: SimpleChanges): void {
-    console.log('2. On change');
-    console.log(changes);
-  }
-  */
-
   ngOnInit(): void {
     console.log('3. On Init');
   }
