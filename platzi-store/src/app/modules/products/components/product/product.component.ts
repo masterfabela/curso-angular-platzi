@@ -1,6 +1,5 @@
 import {
   Component,
-  DoCheck,
   EventEmitter,
   Input,
   OnDestroy,
@@ -14,7 +13,7 @@ import { Product } from 'src/app/models/product.model';
   templateUrl: './product.component.html',
   styleUrls: ['./product.component.scss'],
 })
-export class ProductComponent implements OnInit, DoCheck, OnDestroy {
+export class ProductComponent implements OnInit, OnDestroy {
   @Input() product: Product;
   @Output() productClick: EventEmitter<any> = new EventEmitter();
   today = new Date();
@@ -25,10 +24,6 @@ export class ProductComponent implements OnInit, DoCheck, OnDestroy {
 
   ngOnInit(): void {
     console.log('3. On Init');
-  }
-
-  ngDoCheck(): void {
-    console.log('4. ngDoCheck');
   }
 
   ngOnDestroy(): void {
