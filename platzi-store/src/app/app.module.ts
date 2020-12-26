@@ -6,9 +6,10 @@ import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
 import { ProductComponent } from './components/product/product.component';
 import { CardComponent } from './components/card/card.component';
+import { ExponentialPipe } from './pipes/exponential.pipe';
 
 @NgModule({
-  declarations: [AppComponent, ProductComponent, CardComponent],
+  declarations: [AppComponent, ProductComponent, CardComponent, ExponentialPipe],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],
   bootstrap: [AppComponent],
