@@ -5,6 +5,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { HighlightDirective } from './directives/highlight.directive';
 import { ExponentialPipe } from './pipes/exponential.pipe';
 import { RouterModule } from '@angular/router';
+import { CardComponent } from './components/card/card.component';
 
 @NgModule({
   declarations: [
@@ -12,6 +13,7 @@ import { RouterModule } from '@angular/router';
     HeaderComponent,
     HighlightDirective,
     ExponentialPipe,
+    CardComponent,
   ],
   imports: [CommonModule, RouterModule],
   exports: [

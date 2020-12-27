@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule, PreloadAllModules } from '@angular/router';
-import { ProductDetailComponent } from './modules/products/components/product-detail/product-detail.component';
 import { LayoutComponent } from './layout/layout.component';
 import { AdminGuard } from './guards/admin.guard';
 
@@ -17,7 +16,7 @@ const routes: Routes = [
       {
         path: 'home',
         loadChildren: () =>
-          import('./modules/home/home.module').then(
+          import('./routes/home/home.module').then(
             (module) => module.HomeModule
           ),
       },
@@ -25,7 +24,7 @@ const routes: Routes = [
         path: 'products',
         canActivate: [AdminGuard],
         loadChildren: () =>
-          import('./modules/products/products.module').then(
+          import('./routes/products/products.module').then(
             (module) => module.ProductsModule
           ),
       },
@@ -33,7 +32,7 @@ const routes: Routes = [
         path: 'contact',
         canActivate: [AdminGuard],
         loadChildren: () =>
-          import('./modules/contact/contact.module').then(
+          import('./routes/contact/contact.module').then(
             (module) => module.ContactModule
           ),
       },
@@ -42,12 +41,12 @@ const routes: Routes = [
   {
     path: 'demo',
     loadChildren: () =>
-      import('./modules/demo/demo.module').then((module) => module.DemoModule),
+      import('./routes/demo/demo.module').then((module) => module.DemoModule),
   },
   {
     path: '**',
     loadChildren: () =>
-      import('./modules/page-not-found/page-not-found.module').then(
+      import('./routes/page-not-found/page-not-found.module').then(
         (module) => module.PageNotFoundModule
       ),
   },
