@@ -6,6 +6,7 @@ import { HighlightDirective } from './directives/highlight.directive';
 import { ExponentialPipe } from './pipes/exponential.pipe';
 import { RouterModule } from '@angular/router';
 import { CardComponent } from './components/card/card.component';
+import { MaterialModule } from '../material/material.module';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,7 @@ import { CardComponent } from './components/card/card.component';
     ExponentialPipe,
     CardComponent,
   ],
-  imports: [CommonModule, RouterModule],
+  imports: [CommonModule, RouterModule, MaterialModule],
   exports: [
     FooterComponent,
     HeaderComponent,
