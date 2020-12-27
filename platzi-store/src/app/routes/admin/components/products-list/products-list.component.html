@@ -2,7 +2,7 @@
   *ngIf="products"
   mat-table
   [dataSource]="products"
-  class="mat-elevation-z8"
+  class="mat-elevation-z8 products-table"
 >
   <ng-container [matColumnDef]="displayedColumns[0]">
     <th mat-header-cell *matHeaderCellDef>Id</th>
@@ -19,6 +19,20 @@
     <td mat-cell *matCellDef="let element">{{ element.price }}</td>
   </ng-container>
 
+  <ng-container [matColumnDef]="displayedColumns[3]">
+    <th mat-header-cell *matHeaderCellDef>Actions</th>
+    <td mat-cell *matCellDef="let element">
+      <button mat-raised-button>Editar</button>
+      <button
+        mat-raised-button
+        [color]="'warn'"
+        (click)="deleteProduct(element.id)"
+      >
+        Eliminar
+      </button>
+    </td>
+  </ng-container>
+
   <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-  <tr mat-row *matRowDef="let row; colums: displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
 </table>
