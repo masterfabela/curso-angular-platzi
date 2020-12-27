@@ -25,7 +25,32 @@
       </div>
       <div class="col-xs-12 col-md-4">
         <div class="box">
+          <h3>Acerca de PlatziStore</h3>
+          <ul>
+            <li><a routerLink="/about-us">Sobre nosotros</a></li>
+            <li><a routerLink="/stores">Nuestras tiendas</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-xs-12 col-md-4">
+        <div class="box">
           <h3>Contacto</h3>
+          <mat-form-field>
+            <input
+              [placeholder]="'Digite su correo'"
+              matInput
+              [formControl]="emailField"
+              type="email"
+            />
+          </mat-form-field>
+          <button
+            [disabled]="emailField.invalid"
+            mat-raised-button
+            (click)="sendMail()"
+          >
+            Enviar
+          </button>
+          <p *ngIf="emailField.invalid">El campo no es valido</p>
         </div>
       </div>
     </div>
