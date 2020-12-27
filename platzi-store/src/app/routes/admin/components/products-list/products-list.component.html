@@ -28,7 +28,7 @@
   <ng-container [matColumnDef]="displayedColumns[3]">
     <th mat-header-cell *matHeaderCellDef>Actions</th>
     <td mat-cell *matCellDef="let element">
-      <button mat-raised-button>Editar</button>
+      <a mat-raised-button [routerLink]="['edit', element.id]">Editar</a>
       <button
         mat-raised-button
         [color]="'warn'"

@@ -23,6 +23,8 @@ export class ProductsService {
   }
 
   updateProduct(id: string, changes: Partial<Product>): Observable<Product> {
+    console.log(id);
+    console.log(changes);
     return this.http.put<Product>(
       `${environment.url_api}/products/${id}`,
       changes
