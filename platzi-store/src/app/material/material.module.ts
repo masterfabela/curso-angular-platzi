@@ -15,6 +15,7 @@ import { LayoutModule } from '@angular/cdk/layout';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatStepperModule } from '@angular/material/stepper';
+import { CdkTableModule } from '@angular/cdk/table';
 
 @NgModule({
   declarations: [],
@@ -28,13 +29,14 @@ import { MatStepperModule } from '@angular/material/stepper';
     MatInputModule,
     MatSelectModule,
     MatRadioModule,
-    MatTableModule,
     MatSidenavModule,
     MatListModule,
     LayoutModule,
     MatPaginatorModule,
     MatFormFieldModule,
     MatStepperModule,
+    MatTableModule,
+    CdkTableModule,
   ],
   exports: [
     MatButtonModule,
@@ -45,13 +47,14 @@ import { MatStepperModule } from '@angular/material/stepper';
     MatInputModule,
     MatSelectModule,
     MatRadioModule,
-    MatTableModule,
     MatSidenavModule,
     MatListModule,
     LayoutModule,
     MatPaginatorModule,
     MatFormFieldModule,
     MatStepperModule,
+    MatTableModule,
+    CdkTableModule,
   ],
 })
 export class MaterialModule {}

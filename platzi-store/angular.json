@@ -157,5 +157,8 @@
       }
     }
   },
-  "defaultProject": "platzi-store"
+  "defaultProject": "platzi-store",
+  "cli": {
+    "analytics": "6c8bd95e-1dae-489e-a5b8-5333fe1ca38a"
+  }
 }
